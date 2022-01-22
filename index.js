@@ -60,6 +60,7 @@ app.get("/", (req, res) => {
 
 // app.post('/api/V2/modik/user', user.create);
 app.post('/api/V2/modik/login', user.login);
+app.get('/api/V2/modik/foto_pegawai/:filename', user.download);
 // app.get('/api/V2/modik/user', user.read);
 // app.get('/api/V2/modik/user/:id', user.read_by_id);
 // app.get('/api/V2/modik/user/mmsi/:mmsi', user.read_by_mmsi);
@@ -70,8 +71,8 @@ app.post('/api/V2/modik/login', user.login);
 // ============================== Absensi ===================================
 app.post('/api/V2/modik/absensi/:id', absensi.create);
 app.get('/api/V2/modik/absensi/:id', absensi.read);
-
-
+app.get('/api/V2/modik/absensi/pegawai/:id', absensi.readbyid);
+app.get('/api/V2/modik/foto_absensi/:filename', absensi.download);
 // ==========================================================================
 
 
